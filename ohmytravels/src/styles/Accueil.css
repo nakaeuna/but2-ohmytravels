@@ -1,0 +1,98 @@
+/* Page Accueil */
+
+.grille {
+    padding-inline: 10%;
+    padding-block: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.grille > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.grille > div > section {
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.div1-a {
+    grid-area: 1 / 1 / 3 / 3;
+    min-height: 400px;
+}
+
+.div1-a > section {
+    background: url("/assets/images/fondAccueil.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.grille .div1-a button {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 9px 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grille .div1-a button:hover {
+    background-color: #e0e0e0;
+}
+
+.div2-a {
+    grid-area: 1 / 3 / 2 / 4;
+    background: linear-gradient(to right, #1C60FF 0%, #0D1EB8 50%, #021338 100%);
+    border-radius: 10px;
+    color: white;
+}
+
+.div3-a {
+    grid-area: 3 / 1 / 4 / 2;
+    background: linear-gradient(to right, #1C60FF 0%, #0D1EB8 50%, #021338 100%);
+    border-radius: 10px;
+    color: white;
+}
+
+.div4-a {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.div5-a {
+    grid-area: 2 / 3 / 4 / 4;
+    height: 50vh;
+}
+
+.div6-a {
+    grid-area: 4 / 1 / 5 / 4;
+}
+
+.div6-a img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grille section {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.grille svg {
+    display: block;
+}
+
+
+
+

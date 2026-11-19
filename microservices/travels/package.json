@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "PORT=3003 node ./bin/www",
+    "start-gendoc": "node swagger-autogen.js",
+    "test": "node --test --experimental-test-coverage --test-force-exit tests/*"
+  },
+  "dependencies": {
+    "@google/genai": "^0.7.0",
+    "ajv": "8.17.1",
+    "ajv-formats": "^3.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.7",
+    "express": "5.0.1",
+    "global-agent": "^3.0.0",
+    "mongodb-memory-server": "^9.1.6",
+    "mongoose": "^8.13.1",
+    "morgan": "~1.9.1",
+    "openmeteo": "^1.2.0",
+    "proxy": "^2.2.0",
+    "supertest": "^6.3.4",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "swagger-autogen": "^2.23.7"
+  }
+}

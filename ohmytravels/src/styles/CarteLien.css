@@ -1,0 +1,18 @@
+/* Composant CarteLien */
+
+.contenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.texte {
+    width: 90%;
+}
+
+.fleche {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}

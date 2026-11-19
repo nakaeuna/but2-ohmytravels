@@ -1,0 +1,232 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "User API Documentation",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3001/api/v1/travels",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-KEY"
+    }
+  },
+  "paths": {
+    "/travel": {
+      "get": {
+        "summary": "retrieves all the travels",
+        "description": "a list of all the saved travels",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/travel/search": {
+      "post": {
+        "summary": "Search a new travel",
+        "description": "searhes a new travel with GeminiAPI",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/travel/save": {
+      "post": {
+        "summary": "Saves a travel",
+        "description": "...",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/travel/{id}": {
+      "get": {
+        "summary": "find a travel by its ID",
+        "description": "...",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "delete a travel with its ID",
+        "description": "...",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Travel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "example": 40
+        },
+        "countryName": {
+          "type": "string",
+          "example": "String"
+        },
+        "city": {
+          "type": "object",
+          "properties": {
+            "cityName": {
+              "type": "string",
+              "example": "String"
+            },
+            "activities": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "activityName": {
+                    "type": "string",
+                    "example": "String"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "String"
+                  }
+                },
+                "required": [
+                  "activityName",
+                  "description"
+                ]
+              }
+            },
+            "suggestedHotel": {
+              "type": "string",
+              "example": "String"
+            }
+          },
+          "required": [
+            "cityName",
+            "activities",
+            "suggestedHotel"
+          ]
+        },
+        "overview": {
+          "type": "string",
+          "example": "String"
+        },
+        "links": {
+          "type": "array",
+          "example": [
+            "String"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "start_date": {
+          "type": "string",
+          "example": "String"
+        },
+        "end_date": {
+          "type": "string",
+          "example": "String"
+        },
+        "estimatedPrice": {
+          "type": "number",
+          "example": 47
+        }
+      },
+      "required": [
+        "id",
+        "countryName",
+        "city",
+        "overview",
+        "links",
+        "start_date",
+        "end_date",
+        "estimatedPrice"
+      ]
+    }
+  }
+}

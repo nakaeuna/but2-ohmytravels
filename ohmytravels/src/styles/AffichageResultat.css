@@ -1,0 +1,86 @@
+/* Composant AffichageRessultat */
+
+.grille-ar {
+    border: black solid 1px;
+    border-radius: 10px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(2, 0.5fr);
+    grid-template-rows: repeat(6, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.grille-ar > div > section {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: black solid 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grille-ar > div {
+    box-sizing: border-box;
+}
+
+.div1-re { grid-area: 1 / 1 / 2 / 2; }
+.div2-re { grid-area: 2 / 1 / 7 / 2; }
+.div3-re { grid-area: 1 / 2 / 2 / 3; }
+.div4-re { grid-area: 2 / 2 / 3 / 3; }
+.div5-re { grid-area: 3 / 2 / 4 / 3; }
+.div6-re { grid-area: 4 / 2 / 7 / 3; }
+.div7-re { grid-area: 1 / 3 / 3 / 5; }
+.div8-re { grid-area: 3 / 3 / 4 / 5; }
+.div9-re { grid-area: 4 / 3 / 5 / 4; }
+.div10-re { grid-area: 4 / 4 / 5 / 5; }
+.div11-re { grid-area: 5 / 3 / 7 / 5; }
+
+.div4-re p, .div1-re p {
+    font-size: 140%;
+}
+
+.liens {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.lien {
+    color: black;
+    text-decoration: none;
+}
+
+.lien:hover,
+.lien:visited:hover {
+    color: #1C60FF;
+    text-decoration: underline;
+}
+
+.lien:visited {
+    color: black;
+}
+
+.div9-re section,
+.div10-re section {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div9-re button,
+.div10-re button {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    border-radius: 0;
+}
+
+.aCote {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+

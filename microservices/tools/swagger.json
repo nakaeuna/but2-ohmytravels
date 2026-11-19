@@ -1,0 +1,128 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "User API Documentation",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3001/api/v1/tools",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/meteo/{latitude}/{longitude}": {
+      "get": {
+        "description": "Obtient la météo au coordonée donné",
+        "parameters": [
+          {
+            "name": "latitude",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "longitude",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/meteo2/{ville}/{pays}": {
+      "get": {
+        "description": "Obtient la météo dans une ville et un pays donné pendant la période de temps des dates précisées (max 16 jours à partir d'aujourd'hui)",
+        "parameters": [
+          {
+            "name": "ville",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pays",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/pays": {
+      "get": {
+        "description": "Listes les pays dans le mondes",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/ip/{ip}": {
+      "get": {
+        "description": "Obtient l'address approximate d'un client en function de son IP",
+        "parameters": [
+          {
+            "name": "ip",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/photo/{ville}/{pays}": {
+      "get": {
+        "description": "Obtient une photo en rapport avec une ville et un pays",
+        "parameters": [
+          {
+            "name": "ville",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pays",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

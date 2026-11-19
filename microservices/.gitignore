@@ -1,0 +1,5 @@
+/template
+/.idea
+.env
+.env.*
+!.env.example

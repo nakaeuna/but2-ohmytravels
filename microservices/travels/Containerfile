@@ -1,0 +1,10 @@
+FROM node
+
+WORKDIR /app
+COPY . /app
+#todo fixe copy
+RUN npm install
+RUN chown -R 20676 /app
+EXPOSE 3004
+ENV PORT=3004
+CMD ["node","./bin/www"]

@@ -1,0 +1,24 @@
+/* Composant CarteMeteo */
+
+.meteo {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.en-haut p,
+.en-bas p {
+    line-height: 0.5;
+}
+
+.light {
+    font-family: 'poppins-light', serif;
+}

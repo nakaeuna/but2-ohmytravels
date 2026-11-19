@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "PORT=3002 node ./bin/www",
+    "start-gendoc": "node swagger-autogen.js"
+  },
+  "dependencies": {
+    "ajv": "8.17.1",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.5.0",
+    "express": "5.0.1",
+    "http-proxy-middleware": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "~1.9.1",
+    "node-fetch": "^3.3.2",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "swagger-autogen": "^2.23.7"
+  }
+}

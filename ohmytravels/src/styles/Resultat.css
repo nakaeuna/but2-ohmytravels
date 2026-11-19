@@ -1,0 +1,35 @@
+/* Page Résultat + ResultatSauvegarde*/
+
+.resultat {
+    margin-inline: 10%;
+    margin-block: 2%;
+    box-sizing: border-box;
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cadrePresentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.cadrePresentation > * {
+    margin: 0;
+}
+
+.gauche h1, .gauche h3 {
+    margin: 0;
+}
+
+.droite {
+    display: flex;
+    align-items: center;
+}
+
+.contenuResultat {
+    flex-grow: 1;
+}
